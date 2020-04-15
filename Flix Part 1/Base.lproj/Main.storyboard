@@ -10,38 +10,51 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flix_Part_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="164" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="agl-eb-giK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="agl-eb-giK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableCell" rowHeight="164" id="e7z-WV-Ai4" customClass="MoviewTableViewCell" customModule="Flix_Part_1" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="164"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableCell" id="e7z-WV-Ai4" customClass="MoviewTableViewCell" customModule="Flix_Part_1" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="164.33332824707031"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e7z-WV-Ai4" id="yLS-79-YJd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="164.33332824707031"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNa-KJ-tgg">
-                                            <rect key="frame" x="124" y="11" width="199" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNa-KJ-tgg">
+                                            <rect key="frame" x="126" y="13.999999999999998" width="233" height="25.333333333333329"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r8k-iz-l09">
-                                            <rect key="frame" x="0.0" y="11" width="116" height="142"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r8k-iz-l09">
+                                            <rect key="frame" x="18" y="14" width="100" height="136"/>
                                             <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="oPk-Gg-eB1"/>
+                                                <constraint firstAttribute="height" constant="136" id="rQg-ts-3pE"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clw-9U-Wqf">
-                                            <rect key="frame" x="124" y="45" width="199" height="108"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clw-9U-Wqf">
+                                            <rect key="frame" x="126" y="39.333333333333336" width="233" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="clw-9U-Wqf" secondAttribute="bottom" constant="14" id="70B-8v-kmT"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="clw-9U-Wqf" secondAttribute="trailing" id="AZQ-nz-lAd"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GNa-KJ-tgg" secondAttribute="trailing" id="Apw-vr-kaa"/>
+                                        <constraint firstItem="GNa-KJ-tgg" firstAttribute="top" secondItem="r8k-iz-l09" secondAttribute="top" id="Dqs-qU-wfI"/>
+                                        <constraint firstItem="r8k-iz-l09" firstAttribute="leading" secondItem="yLS-79-YJd" secondAttribute="leading" constant="18" id="G03-B9-e82"/>
+                                        <constraint firstItem="clw-9U-Wqf" firstAttribute="top" secondItem="GNa-KJ-tgg" secondAttribute="bottom" id="Y2l-Jt-qKA"/>
+                                        <constraint firstItem="GNa-KJ-tgg" firstAttribute="leading" secondItem="clw-9U-Wqf" secondAttribute="leading" id="mTu-zY-H6U"/>
+                                        <constraint firstItem="GNa-KJ-tgg" firstAttribute="leading" secondItem="r8k-iz-l09" secondAttribute="trailing" constant="8" id="rlk-gC-9qs"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="r8k-iz-l09" secondAttribute="bottom" constant="14" id="vxP-0p-hpo"/>
+                                        <constraint firstItem="r8k-iz-l09" firstAttribute="top" secondItem="yLS-79-YJd" secondAttribute="top" constant="14" id="xZV-qJ-hRa"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="posterView" destination="r8k-iz-l09" id="2Jo-R9-aDV"/>
