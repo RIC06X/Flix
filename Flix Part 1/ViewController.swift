@@ -30,10 +30,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let posterPath = movie["poster_path"] as! String
         let posterUrl = URL(string: baseUrl + posterPath)
         
-        
         cell.titleLabel.text = "\(title)"
         cell.synopsisLable.text = "\(synopsis)"
-        cell.posterView.af_setImage(withURL: posterUrl!)
+        cell.posterView.af.setImage(withURL: posterUrl!)
         return cell
     }
     
@@ -64,7 +63,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         task.resume()
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // find the selected movie
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+    
+        //pass the detail of the selected movie to the MovieDetailViewController
+        let detailViewController = segue.destination as! MovieDetailViewController
+        
+        detailViewController.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
 }
 
