@@ -17,11 +17,13 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 ### App Walkthrough GIF
 
 <img src="https://i.imgur.com/zTYDowf.gif" width=250><br>
-Movie Detail
+<p>Movie Detail</p>
 <img src="https://i.imgur.com/pmomtNq.gif" width=250><br>
-Poster Wall
+<p>Poster Wall</p>
+
 ### Notes
-- Spent a long time of finding how to fully fill imageView into GridCell. Found at GridCell Attribute-View-Content-Mode
+
+- Spent a long time of finding how to fully fill imageView into GridCell. Found at GridCell Attribute->View->Content_Mode
 
 ---
 
