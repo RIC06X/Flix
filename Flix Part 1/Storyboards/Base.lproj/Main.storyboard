@@ -188,10 +188,14 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ppd-1g-AB5">
                                 <rect key="frame" x="16" y="214" width="125" height="170"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="9LR-py-asL"/>
                                     <constraint firstAttribute="height" constant="170" id="RXW-cN-fNL"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="r1L-84-4fP" appends="YES" id="Mt4-5E-eif"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOr-09-DJ6">
                                 <rect key="frame" x="149" y="307" width="210" height="27.666666666666686"/>
@@ -207,6 +211,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="FOr-09-DJ6" firstAttribute="leading" secondItem="ppd-1g-AB5" secondAttribute="trailing" constant="8" id="014-I2-654"/>
                             <constraint firstItem="oiE-Gr-HJd" firstAttribute="leading" secondItem="Vte-Np-eAk" secondAttribute="leading" constant="16" id="1DO-Xh-VuL"/>
@@ -228,11 +233,17 @@
                         <outlet property="posterView" destination="ppd-1g-AB5" id="muW-gf-Obj"/>
                         <outlet property="synopsisLable" destination="oiE-Gr-HJd" id="d55-zn-Sem"/>
                         <outlet property="titleLable" destination="FOr-09-DJ6" id="Jsb-MH-rXD"/>
+                        <segue destination="itZ-rB-S8O" kind="presentation" identifier="TrailerModalSegue" id="EmC-eF-upx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1T-Il-cvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="r1L-84-4fP">
+                    <connections>
+                        <action selector="didTapPoster:" destination="abw-xf-IeM" id="18k-wS-J2J"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3014" y="655"/>
+            <point key="canvasLocation" x="3076" y="1028.5714285714287"/>
         </scene>
         <!--Superhero-->
         <scene sceneID="xH4-Hv-wTG">
@@ -253,20 +264,27 @@
             </objects>
             <point key="canvasLocation" x="1000.8" y="1396.5517241379312"/>
         </scene>
-        <!--View Controller-->
+        <!--Trailer View Controller-->
         <scene sceneID="xOW-1W-9pF">
             <objects>
-                <viewController id="itZ-rB-S8O" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZiD-UQ-OiU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="cYp-w6-EwD"/>
-                    </view>
+                <viewController id="itZ-rB-S8O" customClass="TrailerViewController" customModule="Flix_Part_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <wkWebView key="view" contentMode="scaleToFill" id="Bbu-Jc-ML0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <wkWebViewConfiguration key="configuration">
+                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" video="YES"/>
+                            <wkPreferences key="preferences"/>
+                        </wkWebViewConfiguration>
+                    </wkWebView>
+                    <navigationItem key="navigationItem" id="upd-3i-Pn0"/>
+                    <connections>
+                        <outlet property="webView" destination="Bbu-Jc-ML0" id="NYb-jE-wha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZS-lE-gdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3014" y="1397"/>
+            <point key="canvasLocation" x="3988" y="1029"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

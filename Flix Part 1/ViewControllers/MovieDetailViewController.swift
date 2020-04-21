@@ -19,9 +19,14 @@ class MovieDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //handle user tap on poster
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapPoster(sender:)))
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        posterView.isUserInteractionEnabled = true
+        posterView.addGestureRecognizer(tapGestureRecognizer)
 
         // Do any additional setup after loading the view.
-        
         titleLable.text = movie["title"] as? String
         titleLable.sizeToFit()
         synopsisLable.text = movie["overview"] as? String
@@ -39,7 +44,18 @@ class MovieDetailViewController: UIViewController {
         
     }
     
-
+    @IBAction func didTapPoster(sender: UITapGestureRecognizer) {
+        print("Poster Tapped")
+        performSegue(withIdentifier: "TrailerModalSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let id = movie["id"] as! Int
+        print("\(id) at prepare")
+        let TrailerViewController = segue.destination as! TrailerViewController
+        TrailerViewController.movie_id = id
+    }
+    
     /*
     // MARK: - Navigation
 
