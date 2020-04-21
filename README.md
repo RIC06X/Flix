@@ -31,6 +31,7 @@ Trailer WebView
 ### Notes
 
 - Spent a long time of finding how to fully fill imageView into GridCell. Found at GridCell Attribute->View->Content_Mode
+- Before using WK WebView, should add "Webkit framework" at Project's Target page, othewise error occurs. 
 
 ---
 
